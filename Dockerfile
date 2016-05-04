@@ -32,6 +32,7 @@ RUN wget https://phar.phpunit.de/phpunit.phar  && \
     chmod +x /usr/local/bin/phpunit
 
 # Atoum
-RUN wget https://github.com/atoum/atoum/releases/download/2.6.1/atoum.phar && \
-    mv atoum.phar /usr/local/bin/atoum && \
-    chmod +x /usr/local/bin/atoum
+RUN wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar && \
+    chmod +x mageekguy.atoum.phar
+
+WORKDIR /phptest
