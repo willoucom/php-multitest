@@ -9,7 +9,8 @@ toolbox for testing phpcode in docker
 
 - php codesniffer : https://github.com/squizlabs/PHP_CodeSniffer
 - php mess detector : https://phpmd.org/
-- php depend : https://pdepend.org/
 - php copy/paste detector : https://github.com/sebastianbergmann/phpcpd
 - Php Unit : https://phpunit.de/
 - Atoum : http://atoum.org
+- Composer : https://getcomposer.org
+- xdebug : https://xdebug.org/

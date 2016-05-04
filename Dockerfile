@@ -8,6 +8,15 @@ RUN apt-get update && apt-get install -y \
 # php libraries
 RUN docker-php-ext-install bz2
 
+# php xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
+# Composer
+RUN wget https://getcomposer.org/download/1.0.3/composer.phar  && \
+    mv composer.phar /usr/local/bin/composer && \
+    chmod +x /usr/local/bin/composer && \
+    composer self-update
+
 # php codesniffer
 RUN pear install PHP_CodeSniffer
 
@@ -36,3 +45,5 @@ RUN wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar && \
     chmod +x mageekguy.atoum.phar
 
 WORKDIR /phptest
+
+RUN php -v
